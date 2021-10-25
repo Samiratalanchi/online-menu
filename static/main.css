@@ -147,6 +147,18 @@
         background-color: red;
         opacity: 0;
         z-index: 5;
+        cursor: pointer;
+    }
+    #clickprevious {
+        width: 17vw;
+        height: 17vw;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: -45vw;
+        background-color: red;
+        opacity: 0;
+        z-index: 5;
+        cursor: pointer;
     }
 
     @keyframes turntomain {
@@ -164,6 +176,20 @@
             rotate: 360deg;
         }
     }
+    @keyframes turntomainPr {
+        0% {
+            width: 17vw;
+            height: 17vw;
+            margin-left: -45vw;
+            margin-top: 0;
+        }
+        100% {
+            width: 55vw;
+            height: 55vw;
+            margin-left: 0;
+            margin-top: -17.5vh;
+        }
+    }
     @keyframes turntopast {
         0% {
             width: 55vw;
@@ -176,7 +202,20 @@
             height: 17vw;
             margin-left: -45vw;
             margin-top: 0;
-            rotate: 360deg;
+        }
+    }
+    @keyframes turntonextPr {
+        0% {
+            width: 55vw;
+            height: 55vw;
+            margin-left: 0;
+            margin-top: -17.5vh;
+        }
+        100% {
+            width: 17vw;
+            height: 17vw;
+            margin-left: 45vw;
+            margin-top: 0;
         }
     }
     @keyframes showNext {
@@ -196,6 +235,23 @@
         }
         
     }
+    @keyframes showPr {
+        80% {
+            visibility: hidden;
+            width: 17vw;
+            height: 17vw;
+            margin-left: -50vw;
+            margin-top: 0%;
+        }
+        100% {
+            visibility: visible;
+            width: 17vw;
+            height: 17vw;
+            margin-left: -45vw;
+            margin-top: 0%;
+        }
+        
+    }
     @keyframes bewhite {
         100% {
             fill: white;
@@ -209,5 +265,8 @@
         75% { fill: white;}
         100% { fill: var(--tomato);}
 
+    }
+    @keyframes hidestar {
+        100% { fill: white;}
     }
 }
