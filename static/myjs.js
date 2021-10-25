@@ -128,7 +128,6 @@ function displayNext() {
 
         pizzaId=0;
     }
-    console.log (pizzaId);
     pizzaId += 1;
     
     
@@ -221,7 +220,6 @@ function displayPrevious() {
 
     }
     
-    console.log (pizzaId);
 }
 
 
