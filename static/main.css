@@ -1,6 +1,40 @@
-root {
-    --var-kerem: #FBE6D6;
+:root {
+    --light: #FBE6D6;
 }
 @media screen and (max-width: 600px) {
-    
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    #box {
+        width: 60vw;
+        height: 80vh;
+        background-image: linear-gradient(white 20%,var(--light) 70%);
+        border-radius: 50%;
+    }
+    .board {
+        border-radius: 50%;
+        background-image: url(./img/board.jpeg);
+        background-size: cover;
+        border: 1px solid black;
+        position: absolute;
+    }
+    #board-m {
+        width: 50vw;
+        height: 50vw;
+        margin-left: 5vw;
+    }
+    #board-p,#board-n {
+        width: 20vw;
+        height: 20vw;
+    }
+    #board-p {
+        margin-left: 45vw;
+    }
+    #board-n {
+        margin-left: -45vw;
+        overflow: hidden;
+    }
 }
