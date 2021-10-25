@@ -1,5 +1,6 @@
 :root {
     --light: #FBE6D6;
+    --tomato: tomato;
 }
 @media screen and (max-width: 600px) {
     body {
@@ -12,7 +13,7 @@
         width: 60vw;
         height: 80vh;
         background-image: linear-gradient(white 20%,var(--light) 70%);
-        border-radius: 50%;
+        border-radius: 50px;
     }
     .board {
         border-radius: 50%;
@@ -22,9 +23,9 @@
         position: absolute;
     }
     #board-m {
-        width: 50vw;
-        height: 50vw;
-        margin-left: 5vw;
+        width: 60vw;
+        height: 60vw;
+        margin-left: 0vw;
         margin-top: 10vw;
     }
     #board-p, #board-n {
@@ -43,17 +44,48 @@
         border-radius: 50%;
     }
     #pizza-m {
-        width: 45vw;
-        height: 45vw;
-        background-image: url(./img/pizza/indiana.png);
+        width: 55vw;
+        height: 55vw;
         margin-left: 2.5vw;
         margin-top: 2.5vw;
+        background-image: url(./img/pizza/delcapo.png);
     }
     #pizza-p, #pizza-n {
         width: 17vw;
         height: 17vw;
         margin-left: 1.5vw;
         margin-top: 1.5vw;
-        background-image: url(./img/pizza/indiana.png);
+        
     }
+    #pizza-n {
+        background-image: url(./img/pizza/margarita.png);
+    }
+    #pizza-p {
+        background-image: url(./img/pizza/miracle.png);
+    }
+    #container {
+        width: 50vw;
+        position: absolute;
+        margin-top: 45vh;
+        margin-left: 5vw;
+    }
+    #price {
+        margin-left: 60%;
+    }
+    #pizzaIng {
+        margin-top: 5vh;
+    }
+    #starbox {
+        width: 45vw;
+        position: absolute;
+        margin-top: 2vh;
+        margin-left: 5vw;
+        height: 30px;
+    }
+    svg {
+        width: 30px;
+        height: 30px;
+        fill: var(--tomato);
+    }
+
 }
