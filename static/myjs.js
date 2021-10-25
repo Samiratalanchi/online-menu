@@ -44,7 +44,7 @@ var pizzaId=3;
 
 function displayNext() {
 
-    
+    if(pizzaId==6) { pizzaId = 1};
 
     for(let j=1;j <= menu.length ;j++) {
         document.getElementById("star-"+j).style.animation="hidestar 1ms linear forwards";
@@ -55,6 +55,8 @@ function displayNext() {
         document.getElementById("pizza-" + menu.length).style.animation="turntopast 500ms linear forwards";
         document.getElementById("pizza-" + pizzaId ).style.visibility="visible";
         document.getElementById("pizza-" + pizzaId ).style.animation="turntomain 500ms linear forwards";
+
+        document.getElementById("pizza-" + (menu.length -1)).style.animation="none";
         document.getElementById("pizza-" + (menu.length -1)).style.visibility="hidden";
 
         document.getElementById("pizza-"+ (pizzaId + 1)).style.animation="showNext 500ms linear forwards";
@@ -69,10 +71,11 @@ function displayNext() {
         
     } else if (pizzaId == 2 ) {
 
-
         document.getElementById("pizza-" + (pizzaId - 1)).style.animation="turntopast 500ms linear forwards";
         document.getElementById("pizza-" + pizzaId ).style.visibility="visible";
         document.getElementById("pizza-" + pizzaId ).style.animation="turntomain 500ms linear forwards";
+
+        document.getElementById("pizza-"+ menu.length).style.animation="none";
         document.getElementById("pizza-" + menu.length).style.visibility="hidden";
 
         document.getElementById("pizza-"+ (pizzaId + 1)).style.animation="showNext 500ms linear forwards";
@@ -90,6 +93,8 @@ function displayNext() {
         document.getElementById("pizza-" + (pizzaId - 1)).style.animation="turntopast 500ms linear forwards";
         document.getElementById("pizza-" + pizzaId ).style.visibility="visible";
         document.getElementById("pizza-" + pizzaId ).style.animation="turntomain 500ms linear forwards";
+
+        document.getElementById("pizza-" + (pizzaId - 2)).style.animation="none";
         document.getElementById("pizza-" + (pizzaId - 2)).style.visibility="hidden";
 
         document.getElementById("pizza-"+ (pizzaId + 1)).style.animation="showNext 500ms linear forwards";
@@ -107,6 +112,8 @@ function displayNext() {
         document.getElementById("pizza-" + (pizzaId - 1)).style.animation="turntopast 500ms linear forwards";
         document.getElementById("pizza-" + pizzaId ).style.visibility="visible";
         document.getElementById("pizza-" + pizzaId ).style.animation="turntomain 500ms linear forwards";
+
+        document.getElementById("pizza-" + (pizzaId - 2)).style.animation="none";
         document.getElementById("pizza-" + (pizzaId - 2)).style.visibility="hidden";
 
         document.getElementById("pizza-1").style.animation="showNext 500ms linear forwards";
@@ -121,7 +128,7 @@ function displayNext() {
 
         pizzaId=0;
     }
-
+    console.log (pizzaId);
     pizzaId += 1;
     
     
@@ -129,19 +136,18 @@ function displayNext() {
 function displayPrevious() {
 
     pizzaId --;
-    console.log(pizzaId);
 
     for(let j=1;j <= menu.length ;j++) {
         document.getElementById("star-"+j).style.animation="hidestar 1ms linear forwards";
     }
-
-    console.log(pizzaId);
+    if(pizzaId <= 0) { pizzaId = 5};
     if(pizzaId == 1 ) {
-        
 
         document.getElementById("pizza-" + pizzaId).style.animation="turntonextPr 500ms linear forwards";
         document.getElementById("pizza-" + menu.length).style.visibility="visible";
         document.getElementById("pizza-" + menu.length).style.animation="turntomainPr 500ms linear forwards";
+        
+        document.getElementById("pizza-" + (pizzaId + 1)).style.animation="none";
         document.getElementById("pizza-" + (pizzaId + 1)).style.visibility="hidden";
 
         document.getElementById("pizza-"+ (menu.length -1) ).style.animation="showPr 500ms linear forwards";
@@ -153,6 +159,7 @@ function displayPrevious() {
         for(let i=1;i <= menu[menu.length-1].star;i++) {
             document.getElementById("star-"+i).style.animation="showstars 1s linear forwards";
         }
+        
         pizzaId = menu.length +1;
         
     } else if (pizzaId == 2 ) {
@@ -160,6 +167,8 @@ function displayPrevious() {
         document.getElementById("pizza-" + (pizzaId)).style.animation="turntonextPr 500ms linear forwards";
         document.getElementById("pizza-" + (pizzaId - 1)).style.visibility="visible";
         document.getElementById("pizza-" + (pizzaId - 1)).style.animation="turntomainPr 500ms linear forwards";
+        
+        document.getElementById("pizza-" + (pizzaId + 1)).style.animation="none";
         document.getElementById("pizza-" + (pizzaId + 1)).style.visibility="hidden";
 
         document.getElementById("pizza-"+ menu.length).style.animation="showPr 500ms linear forwards";
@@ -177,6 +186,8 @@ function displayPrevious() {
         document.getElementById("pizza-" + (pizzaId)).style.animation="turntonextPr 500ms linear forwards";
         document.getElementById("pizza-" + (pizzaId - 1)).style.visibility="visible";
         document.getElementById("pizza-" + (pizzaId - 1)).style.animation="turntomainPr 500ms linear forwards";
+        
+        document.getElementById("pizza-" + (pizzaId + 1)).style.animation="none";
         document.getElementById("pizza-" + (pizzaId + 1)).style.visibility="hidden";
 
         document.getElementById("pizza-"+ (pizzaId -2)).style.animation="showPr 500ms linear forwards";
@@ -194,6 +205,8 @@ function displayPrevious() {
         document.getElementById("pizza-" + (pizzaId)).style.animation="turntonextPr 500ms linear forwards";
         document.getElementById("pizza-" + (pizzaId - 1)).style.visibility="visible";
         document.getElementById("pizza-" + (pizzaId - 1)).style.animation="turntomainPr 500ms linear forwards";
+        
+        document.getElementById("pizza-1").style.animation="none";
         document.getElementById("pizza-1").style.visibility="hidden";
 
         document.getElementById("pizza-"+ (pizzaId -2)).style.animation="showPr 500ms linear forwards";
@@ -208,7 +221,7 @@ function displayPrevious() {
 
     }
     
-    
+    console.log (pizzaId);
 }
 
 
