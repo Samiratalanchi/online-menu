@@ -183,6 +183,10 @@
         cursor: pointer;
     }
 
+    #pizza-1:hover,#pizza-2:hover,#pizza-3:hover,#pizza-4:hover,#pizza-5:hover {
+        transform: rotate(180deg);
+    }
+
     @keyframes turntomain {
         0% {
             width: 17vw;

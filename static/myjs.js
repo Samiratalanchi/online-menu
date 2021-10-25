@@ -44,6 +44,9 @@ var pizzaId=3;
 
 function displayNext() {
 
+    document.getElementById("count").value="1";
+    document.getElementById("addbuttonanim").style.animation="none";
+
     if(pizzaId==6) { pizzaId = 1};
 
     for(let j=1;j <= menu.length ;j++) {
@@ -133,6 +136,9 @@ function displayNext() {
     
 }
 function displayPrevious() {
+
+    document.getElementById("count").value="1";
+    document.getElementById("addbuttonanim").style.animation="none";
 
     pizzaId --;
 
@@ -227,6 +233,7 @@ function addToCart() {
     document.getElementById("addbuttonanim").style.animation="none";
 
     counter += parseInt(document.getElementById("count").value);
+
     document.getElementById("addbuttonanim").style.animation="addtocart 1s linear";
     document.getElementById("counter").innerHTML = counter;
 }
