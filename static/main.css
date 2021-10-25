@@ -77,7 +77,6 @@
     #pizza-1, #pizza-3 {
         width: 17vw;
         height: 17vw;
-        
     }
     #pizza-1 {
         margin-left: -45vw;
@@ -150,20 +149,34 @@
         z-index: 5;
     }
 
-    @keyframes turnp {
+    @keyframes turntomain {
+        0% {
+            width: 17vw;
+            height: 17vw;
+            margin-left: 45vw;
+            margin-top: 0;
+        }
         100% {
             width: 55vw;
             height: 55vw;
             margin-left: 0;
             margin-top: -17.5vh;
+            rotate: 360deg;
         }
     }
-    @keyframes turnm {
+    @keyframes turntopast {
+        0% {
+            width: 55vw;
+            height: 55vw;
+            margin-left: 0;
+            margin-top: -17.5vh;
+        }
         100% {
             width: 17vw;
             height: 17vw;
             margin-left: -45vw;
             margin-top: 0;
+            rotate: 360deg;
         }
     }
     @keyframes showNext {
@@ -181,9 +194,18 @@
         }
         
     }
-    @keyframes showstars {
+    @keyframes bewhite {
         100% {
-            fill: var(--tomato);
+            fill: white;
         }
+    }
+
+    @keyframes showstars {
+        0% { fill: var(--tomato); }
+        25% { fill: white;}
+        50% { fill: var(--tomato);}
+        75% { fill: white;}
+        100% { fill: var(--tomato);}
+
     }
 }

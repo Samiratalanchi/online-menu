@@ -40,41 +40,53 @@ var menu = [
         "imageAddress":"./static/img/pizza/royal.png"
     }
 ]; 
-var pizzaId=1;
+var pizzaId=3;
 
 function displayNext() {
-    pizzaId += 1;
 
+    for(let i=1;i<=menu.length;i++) {
+        document.getElementById("pizza-"+i).style.animation="none";
+    }
+    
+
+    for(let i=1;i <= menu.length ;i++) {
+        document.getElementById("star-"+i).style.fill="white";
+    }
 
     if(pizzaId == 1 ) {
-        document.getElementById("pizza-"+pizzaId).style.animation="turnm 500ms linear forwards";
-        document.getElementById("pizza-"+ (pizzaId + 1)).style.animation="turnp 500ms linear forwards";
-        document.getElementById("pizza-"+ (pizzaId - 1)).style.visibility="hidden";
-        document.getElementById("pizza-"+ menu.length).style.visibility="visible";
+        // document.getElementById("pizza-"+pizzaId).style.animation="turnm 500ms linear forwards";
+        // document.getElementById("pizza-"+ (pizzaId + 1)).style.animation="turnp 500ms linear forwards";
+        // document.getElementById("pizza-"+ (pizzaId - 1)).style.visibility="hidden";
+        // document.getElementById("pizza-"+ menu.length).style.visibility="visible";
         
-
-        document.getElementById("pizza-name").innerHTML= menu[pizzaId].name;
-        document.getElementById("price").innerHTML= menu[pizzaId].price;
-        document.getElementById("pizzaIng").innerHTML= menu[pizzaId].ingrediants;
     } else if (pizzaId >= 2 && pizzaId < menu.length ) {
 
-        document.getElementById("pizza-"+pizzaId).style.animation="turnm 500ms linear forwards";
-        document.getElementById("pizza-"+ (pizzaId + 1)).style.animation="turnp 500ms linear forwards";
-        document.getElementById("pizza-"+ (pizzaId - 1)).style.visibility="hidden";
+        document.getElementById("pizza-" + (pizzaId - 1)).style.animation="turntopast 500ms linear forwards";
+        document.getElementById("pizza-" + (pizzaId + 0)).style.animation="turntomain 500ms linear forwards";
+        document.getElementById("pizza-" + (pizzaId - 2)).style.visibility="hidden";
 
-        document.getElementById("pizza-"+ (pizzaId +2)).style.animation="showNext 500ms linear forwards";
+        document.getElementById("pizza-"+ (pizzaId + 1)).style.animation="showNext 500ms linear forwards";
+
+        document.getElementById("pizza-name").innerHTML= menu[pizzaId-1].name;
+        document.getElementById("price").innerHTML= menu[pizzaId-1].price;
+        document.getElementById("pizzaIng").innerHTML= menu[pizzaId-1].ingrediants;
 
 
+    } else {
+
+        pizzaId -= 1;
         document.getElementById("pizza-name").innerHTML= menu[pizzaId].name;
         document.getElementById("price").innerHTML= menu[pizzaId].price;
         document.getElementById("pizzaIng").innerHTML= menu[pizzaId].ingrediants;
 
-    } else {}
+        // pizzaId=0;
+    }
 
+
+    for(let i=1;i <= menu[pizzaId-1].star;i++) {
+        document.getElementById("star-"+i).style.animation="showstars 1s linear forwards 500ms";
+    }
+
+    pizzaId += 1;
     
-    // for(let i=1;i <= menu[pizzaId].star;i++) {
-    //     document.getElementsByClassName("stars")[i].style.animation="showstars 500ms linear forwards";
-    // }
-
-
 }
