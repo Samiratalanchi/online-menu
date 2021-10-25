@@ -130,16 +130,27 @@
     }
     #buy {
         position: absolute;
-        margin-top: 40vh;
+        margin-top: 41vh;
     }
     #addbutton {
+        height: 25px;
+        background-color: white;
+        margin-right: 5vw;
+        border-radius: 20px;
+        z-index: 11;
+    }
+    #addbuttonanim {
+        position: absolute;
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        color: black;
-        background-color: white;
-        text-align: center;
-        margin-right: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -8vw;
+        margin-top: 35vh;
+        z-index: 10;
+        opacity: 0;
     }
     #count {
         font-size: 55px;
@@ -279,5 +290,18 @@
     }
     @keyframes hidestar {
         100% { fill: white;}
+    }
+    @keyframes addtocart {
+        250% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            margin-top: -40vh;
+            margin-left: 40vw;
+        }
     }
 }

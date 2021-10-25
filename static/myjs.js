@@ -221,5 +221,14 @@ function displayPrevious() {
     }
     
 }
+var counter = 0;
+function addToCart() {
+
+    document.getElementById("addbuttonanim").style.animation="none";
+
+    counter += parseInt(document.getElementById("count").value);
+    document.getElementById("addbuttonanim").style.animation="addtocart 1s linear";
+    document.getElementById("counter").innerHTML = counter;
+}
 
 
