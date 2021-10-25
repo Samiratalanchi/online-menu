@@ -185,12 +185,14 @@
             width: 17vw;
             height: 17vw;
             margin-left: 50vw;
+            margin-top: 0%;
         }
         100% {
             visibility: visible;
             width: 17vw;
             height: 17vw;
             margin-left: 45vw;
+            margin-top: 0%;
         }
         
     }
