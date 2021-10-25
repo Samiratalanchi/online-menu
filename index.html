@@ -14,13 +14,9 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-bag-fill buybox" viewBox="0 0 16 16">
         <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
       </svg>
-    <div class="board" id="board-p">
-        <div class="pizza" id="pizza-p" onclick="displayNext()"></div>
-    </div>
+    
     <div id="box">
-        <div class="board" id="board-m">
-            <div class="pizza" id="pizza-m"></div>
-        </div>
+        <div class="board" id="board-m" ></div>
         <div id="container">
             <h1 id="pizza-name">Del Capo</h1>
             <h3 id="price">121,000</h3>
@@ -44,8 +40,33 @@
             </div>
         </div>
     </div>
-    <div class="board" id="board-n">
-        <div class="pizza" id="pizza-n" ></div>
-    </div>
+    
+    <div class="board" id="board-n"></div>
+    <div class="board" id="board-p" ></div>
+    <div class="pizza" id="pizza-3" ></div>
+    <div class="pizza" id="pizza-2"></div>
+    <div class="pizza" id="pizza-1" ></div>
+    <div class="pizza" id="pizza-4" style="visibility: hidden;"></div>
+    <div class="pizza" id="pizza-5"></div>
+
+    <div id="clicknext" onclick="displayNext()"></div>
+    <div id="clickprevious"></div>
+    <!-- <div id="buy">
+        <form>
+            <button id="addbutton" type="button" onclick="addtoCart()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-bag-check addto" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                </svg>
+            </button>
+            <select id="count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </form>
+    </div> -->
 
 </body>

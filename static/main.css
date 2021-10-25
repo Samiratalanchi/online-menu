@@ -65,31 +65,39 @@
     .pizza {
         background-size: cover;
         border-radius: 50%;
+        position: absolute;
     }
-    #pizza-m {
+    #pizza-2 {
         width: 55vw;
         height: 55vw;
-        margin-left: 2.5vw;
-        margin-top: 2.5vw;
+        margin-top: -17.5vh;
         background-image: url(./img/pizza/delcapo.png);
+        z-index: 1;
     }
-    #pizza-p, #pizza-n {
+    #pizza-1, #pizza-3 {
         width: 17vw;
         height: 17vw;
-        margin-left: 1.5vw;
-        margin-top: 1.5vw;
         
     }
-    #pizza-n {
+    #pizza-1 {
+        margin-left: -45vw;
         background-image: url(./img/pizza/margarita.png);
     }
-    #pizza-p {
+    #pizza-3 {
+        margin-left: 45vw;
         background-image: url(./img/pizza/miracle.png);
+        
+    }
+    #pizza-4 {
+        background-image: url(./img/pizza/indiana.png);
+    }
+    #pizza-5 {
+        background-image: url(./img/pizza/royal.png);
     }
     #container {
         width: 50vw;
         position: absolute;
-        margin-top: 45vh;
+        margin-top: 40vh;
         margin-left: 5vw;
     }
     #price {
@@ -110,5 +118,72 @@
         height: 30px;
         fill: var(--tomato);
     }
+    #buy {
+        position: absolute;
+        margin-top: 40vh;
+    }
+    #addbutton {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        color: black;
+        background-color: white;
+        text-align: center;
+        margin-right: 5vw;
+    }
+    #count {
+        font-size: 55px;
+        height: 100px;
+    }
+    .addto {
+        width: 30px;
+        height: 30px;
+    }
+    #clicknext {
+        width: 17vw;
+        height: 17vw;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: 45vw;
+        background-color: red;
+        opacity: 0;
+        z-index: 5;
+    }
 
+    @keyframes turnp {
+        100% {
+            width: 55vw;
+            height: 55vw;
+            margin-left: 0;
+            margin-top: -17.5vh;
+        }
+    }
+    @keyframes turnm {
+        100% {
+            width: 17vw;
+            height: 17vw;
+            margin-left: -45vw;
+            margin-top: 0;
+        }
+    }
+    @keyframes showNext {
+        80% {
+            visibility: hidden;
+            width: 17vw;
+            height: 17vw;
+            margin-left: 50vw;
+        }
+        100% {
+            visibility: visible;
+            width: 17vw;
+            height: 17vw;
+            margin-left: 45vw;
+        }
+        
+    }
+    @keyframes showstars {
+        100% {
+            fill: var(--tomato);
+        }
+    }
 }
