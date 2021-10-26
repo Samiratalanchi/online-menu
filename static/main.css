@@ -3,6 +3,8 @@
     --tomato: tomato;
     --pink: #E9C8C3;
 }
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @media screen and (max-width: 600px) {
     body {
         display: flex;
@@ -10,6 +12,7 @@
         justify-content: center;
         overflow: hidden;
         background-image: linear-gradient(var(--pink),white);
+        font-family: 'Architects Daughter', cursive;
     }
     .back {
         position: absolute;
@@ -42,6 +45,7 @@
         font-size: 18vw;
         margin-top: -40vh;
         opacity: 0.75;
+        font-family: 'Lobster', cursive;
     }
     #box {
         width: 60vw;
@@ -114,7 +118,7 @@
         margin-left: 5vw;
     }
     #price {
-        margin-left: 60%;
+        margin-left: 38vw;
     }
     #pizzaIng {
         margin-top: 5vh;

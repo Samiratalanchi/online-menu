@@ -2,7 +2,7 @@ var menu = [
     {
         "id": 01,
         "name":"Margherita",
-        "price":"73,000",
+        "price":"25$",
         "ingrediants":"tomato sauce, basil, mozarella, vegetable",
         "star": 2,
         "imageAddress":"./static/img/pizza/margarita.png"
@@ -10,7 +10,7 @@ var menu = [
     {
         "id": 02,
         "name":"Del Capo",
-        "price":"121,000",
+        "price":"49$",
         "ingrediants":"tomato sauce, bakon, mozarella, calf steak",
         "star": 5,
         "imageAddress":"./static/img/pizza/delcapo.png"
@@ -18,7 +18,7 @@ var menu = [
     {
         "id": 03,
         "name":"Miracle",
-        "price":"118,000",
+        "price":"45$",
         "ingrediants":"tomato sauce, mushroom, peperoni, potato",
         "star": 4,
         "imageAddress":"./static/img/pizza/miracle.png"
@@ -26,7 +26,7 @@ var menu = [
     {
         "id": 04,
         "name":"Indiana",
-        "price":"98,000",
+        "price":"39$",
         "ingrediants":"tomato sauce, chiken breast, mozarella, chili bellpaper",
         "star": 4,
         "imageAddress":"./static/img/pizza/indiana.png"
@@ -34,7 +34,7 @@ var menu = [
     {
         "id": 05,
         "name":"Royal",
-        "price":"116,000",
+        "price":"48$",
         "ingrediants":"tomato sauce, mushroom, mozarella, bakon, salami",
         "star": 5,
         "imageAddress":"./static/img/pizza/royal.png"
