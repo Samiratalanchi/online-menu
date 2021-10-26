@@ -48,7 +48,6 @@
         height: 80vh;
         background-image: linear-gradient(rgba(226,203,199,0) 20%,var(--light) 70%);
         border-radius: 50px;
-        z-index: 1;
     }
     .board {
         border-radius: 50%;
@@ -89,6 +88,7 @@
     #pizza-1, #pizza-3 {
         width: 17vw;
         height: 17vw;
+        z-index: 1;
     }
     #pizza-1 {
         margin-left: -45vw;
@@ -101,9 +101,11 @@
     }
     #pizza-4 {
         background-image: url(./img/pizza/indiana.png);
+        z-index: 1;
     }
     #pizza-5 {
         background-image: url(./img/pizza/royal.png);
+        z-index: 1;
     }
     #container {
         width: 50vw;
@@ -136,7 +138,7 @@
         opacity: 0.5;
         width: 60vw;
         height: 11vh;
-        z-index: 0;
+        z-index: -1;
         border-radius: 0px 0px 50px 50px;
 
     }
@@ -163,6 +165,7 @@
         opacity: 0;
     }
     #count {
+
         font-size: 55px;
         height: 100px;
         margin-top: 6vh;
@@ -195,10 +198,13 @@
         cursor: pointer;
     }
 
-    #pizza-1:hover,#pizza-2:hover,#pizza-3:hover,#pizza-4:hover,#pizza-5:hover {
-        transform: rotate(180deg);
+    form {
+        margin-left: -8vw;
+        margin-top: 40vh;
+        position: absolute;
+        z-index: 1;
     }
-
+    
     @keyframes turntomain {
         0% {
             width: 17vw;
@@ -308,7 +314,7 @@
         100% { fill: white;}
     }
     @keyframes addtocart {
-        250% {
+        25% {
             opacity: 1;
         }
         75% {
@@ -319,5 +325,34 @@
             margin-top: -40vh;
             margin-left: 40vw;
         }
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+            width: 55vw;
+            height: 55vw;
+            visibility: visible;
+            margin-left: 0;
+            margin-top: -17.5vh;
+        }
+        50% {
+            transform: rotate(180deg);
+            width: 55vw;
+            height: 55vw;
+            visibility: visible;
+            margin-left: 0;
+            margin-top: -17.5vh;
+        }
+        100% {
+            transform: rotate(360deg);
+            width: 55vw;
+            height: 55vw;
+            visibility: visible;
+            margin-left: 0;
+            margin-top: -17.5vh;
+        }
+    }
+    @keyframes stop {
+            100%{ transform: rotate(0deg);}
     }
 }

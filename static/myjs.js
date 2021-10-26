@@ -41,7 +41,6 @@ var menu = [
     }
 ]; 
 var pizzaId=3;
-
 function displayNext() {
 
     document.getElementById("count").value="1";
@@ -237,5 +236,51 @@ function addToCart() {
     document.getElementById("addbuttonanim").style.animation="addtocart 1s linear";
     document.getElementById("counter").innerHTML = counter;
 }
+
+function rotation1 () {
+    document.getElementById("pizza-1").style.visibility="visible";
+    document.getElementById("pizza-1").style.animation="rotate 1s linear infinite";
+}
+function nonRotate1 () {
+    document.getElementById("pizza-1").style.animationPlayState="paused";
+}
+function rotation2 () {
+    document.getElementById("pizza-2").style.animation="none";
+    document.getElementById("pizza-2").style.visibility="visible";
+    document.getElementById("pizza-2").style.animation="rotate 1s linear infinite";
+
+}
+function nonRotate2 () {
+    document.getElementById("pizza-2").style.animationPlayState="paused";
+}
+
+function rotation3 () {
+    document.getElementById("pizza-3").style.animation="none";
+    document.getElementById("pizza-3").style.visibility="visible";
+    document.getElementById("pizza-3").style.animation="rotate 1s linear infinite";
+}
+function nonRotate3 () {
+    document.getElementById("pizza-3").style.animationPlayState="paused";
+}
+
+function rotation4 () {
+    document.getElementById("pizza-4").style.animation="none";
+    document.getElementById("pizza-4").style.visibility="visible";
+    document.getElementById("pizza-4").style.animation="rotate 1s linear infinite";
+}
+function nonRotate4 () {
+    document.getElementById("pizza-4").style.animationPlayState="paused";
+}
+
+function rotation5 () {
+    document.getElementById("pizza-5").style.animation="none";
+    document.getElementById("pizza-5").style.visibility="visible";
+    document.getElementById("pizza-5").style.animation="rotate 1s linear infinite";
+}
+function nonRotate5 () {
+    document.getElementById("pizza-5").style.animationPlayState="paused";
+}
+
+
 
 
