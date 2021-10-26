@@ -15,6 +15,20 @@
         <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
     </svg>
     <div id="badge"><p id="counter">0</p></div>
+    <div id="buy">
+        <form>
+            <button id="addbutton" type="button" onclick="addToCart()">
+                Add
+            </button>
+            <select id="count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </form>
+    </div>
     <div id="box">
         <div class="board" id="board-m" ></div>
         <div id="container">
@@ -51,20 +65,7 @@
 
     <div id="clicknext" onclick="displayNext()"></div>
     <div id="clickprevious" onclick="displayPrevious()"></div>
-    <div id="buy">
-        <form>
-            <button id="addbutton" type="button" onclick="addToCart()">
-                Add
-            </button>
-            <select id="count">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </form>
-    </div>
+    
     <div id="addbuttonanim">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-bag-fill addto" viewBox="0 0 16 16">
             <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>

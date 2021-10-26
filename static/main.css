@@ -48,6 +48,7 @@
         height: 80vh;
         background-image: linear-gradient(rgba(226,203,199,0) 20%,var(--light) 70%);
         border-radius: 50px;
+        z-index: 1;
     }
     .board {
         border-radius: 50%;
@@ -130,7 +131,14 @@
     }
     #buy {
         position: absolute;
-        margin-top: 41vh;
+        margin-top: 40vh;
+        background-color: var(--tomato);
+        opacity: 0.5;
+        width: 60vw;
+        height: 11vh;
+        z-index: 0;
+        border-radius: 0px 0px 50px 50px;
+
     }
     #addbutton {
         height: 25px;
@@ -138,6 +146,8 @@
         margin-right: 5vw;
         border-radius: 20px;
         z-index: 11;
+        margin-top: 6.5vh;
+        margin-left: 16vw;
     }
     #addbuttonanim {
         position: absolute;
@@ -155,6 +165,8 @@
     #count {
         font-size: 55px;
         height: 100px;
+        margin-top: 6vh;
+        translate: middle;
     }
     .addto {
         width: 30px;
