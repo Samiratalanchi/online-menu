@@ -147,13 +147,14 @@
 
     }
     #addbutton {
-        height: 25px;
+        width: 8vw;
+        height: 3vh;
         background-color: white;
-        margin-right: 5vw;
-        border-radius: 20px;
+        color: var(--tomato);
+        border-radius: 4px;
         z-index: 11;
-        margin-top: 6.5vh;
-        margin-left: 16vw;
+        text-align: center;
+        cursor: pointer;
     }
     #addbuttonanim {
         position: absolute;
@@ -169,11 +170,10 @@
         opacity: 0;
     }
     #count {
-
-        font-size: 55px;
-        height: 100px;
-        margin-top: 6vh;
-        translate: middle;
+        width: 5vw;
+        font-size: 14px;
+        height: 3vh;
+        text-align: center;
     }
     .addto {
         width: 30px;
@@ -207,6 +207,59 @@
         margin-top: 40vh;
         position: absolute;
         z-index: 1;
+        display: inline;
+        
+    }
+    #grid {
+        margin-left: 20vw;
+        height: 3vh;
+        width: 60vw;
+        display: grid;
+        grid-column-gap: 0px;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 8vw 3vw 6vw 3vw;
+        grid-template-rows: 3vh;
+    }
+    .grid-item:nth-child(1) {
+        margin-top: 5vh;
+        margin-left: 31vw;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .grid-item:nth-child(2) {
+        margin-top: 5vh;
+        margin-left: 42vw;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        align-items: center;
+    }
+    .grid-item:nth-child(3) {
+        margin-top: 5vh;
+        margin-left: 41vw;
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .grid-item:nth-child(4) {
+        margin-top: 5vh;
+        margin-left: 40vw;
+        grid-column: 4/5;
+        grid-row: 1/2;
+        align-items: center;
+    }
+    .grid-item:nth-child(2) svg {
+        margin-top: 0.5vh;
+     }
+    .grid-item:nth-child(4) svg {
+       margin-top: 0.5vh;
+       margin-left: -0.5vh;
+    }
+    #plus,#sub {
+        width: 3vw;
+        height: 3vh;
+        background-color: white;
+        text-align: center;
+        cursor: pointer;
     }
     
     @keyframes turntomain {

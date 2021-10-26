@@ -8,16 +8,30 @@
 </head>
 <body>
     <form>
-        <button id="addbutton" type="button" onclick="addToCart()">
-            Add
-        </button>
-        <select id="count">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
+        <div id="grid">
+            <div class="grid-item">
+                <div id="addbutton" onclick="addToCart()">
+                    Add
+                </div>
+            </div>
+            <div class="grid-item">
+                <div id="plus" onclick="plus()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="grid-item">
+                <input id="count" type="text" value="1" placeholder="1">
+            </div>
+            <div class="grid-item">
+                <div id="sub" onclick="sub()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-dash" viewBox="0 0 16 16">
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </form>
     <h1 id="title">Pizza</h1>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-left-circle-fill back" viewBox="0 0 16 16">
@@ -56,7 +70,7 @@
     </div>
     
     <div class="board" id="board-n"></div>
-    <div class="board" id="board-p" ></div>
+    <div class="board" id="board-p"></div>
     <div class="pizza" id="pizza-3" onmouseover="rotation3()" onmouseout="nonRotate3()"></div>
     <div class="pizza" id="pizza-2" onmouseover="rotation2()" onmouseout="nonRotate2()"></div>
     <div class="pizza" id="pizza-1" onmouseover="rotation1()" onmouseout="nonRotate1()"></div>

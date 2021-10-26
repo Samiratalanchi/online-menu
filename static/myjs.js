@@ -280,7 +280,18 @@ function rotation5 () {
 function nonRotate5 () {
     document.getElementById("pizza-5").style.animationPlayState="paused";
 }
-
-
-
+function plus() {
+    let test = parseInt(document.getElementById("count").value)
+    test += 1;
+    if (test<=10) {
+        document.getElementById("count").value=test;
+    }
+}
+function sub() {
+    let test = parseInt(document.getElementById("count").value)
+    test -= 1;
+    if (test>0) {
+        document.getElementById("count").value=test;
+    }
+}
 
